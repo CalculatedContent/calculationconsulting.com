@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" ng-app="calculatedcontentApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+
+<link href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/app.css">
+        <!-- endbuild -->
+</head>
+  <body ng-controller="MainCtrl">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html"><span style="color: #67d5f2">calculation</span> <span style="color: #ffffff">|</span> <span style="color: #72f8fe">consulting</span></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="index.html">Welcome</a>
+              </li>
+              <li class="">
+                <a href="./technology">Technology</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">The Crew</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Contact</a>
+              </li>
+            </ul>
+           <a class="catchphrase" href="./index.html"><span style="color: #ffffff">data science leadership.</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<br />
+	<br />
+	<br />
+<div class='content wide-content' id='content'>
+<div class='container-fluid'>
+<div class='row-fluid'>
+<h3 class='span6 offset3' style='font-size: 25px; margin-top: 1.25em'>
+We calculate what content to create,<br> to reccommend, <br> and to share<br><br>to optimize reader happiness
+</h3>
+</div>
+<div class='row-fluid'>
+<div class='span6 offset3'>
+<p>Welcome to the private beta version of Calculated Content.</p>
+</div>
+</div>
+<div class='row-fluid'>
+<div class='span6 offset3' id='lightweight-email-form'>
+<div ng-hide="showThankYou">
+<input placeholder='email@domain.com' required='' size='20' type='email' value='' ng-model="email" />
+<button class="btn btn-primary" name='submit' value='Notify Me' ng-click="emailRegister()">Notify Me</button>
+</div>
+<br />
+<div ng-cloak ng-show="showThankYou">
+Thank you for expressing you interest in Calculated Content!
+<br />
+We'll be in touch. For now please follow us on Twitter <a href="http://twitter.com/CalcCon">@CalcCon</a>
+</div>
+</div>
+</div>
+<div class='row-fluid'>
+<div class='span6 offset3' id='lightweight-email-msg'>
+&nbsp;
+</div>
+</div>
+<div class='row-fluid'>
+<p class='span6 offset3'>
+</p>
+</div>
+
+<div ng-view></div>
+
+</div>
+</div>
+
+<footer>
+<p class='pull-left'>
+<a href='/t/about'>About</a>
+<a href='/t/team'>Team</a>
+<a href='/t/contact'>Contact</a>
+<a href='/t/jobs'>Jobs</a>
+<a href='/t/privacy'>Privacy</a>
+<a href='/t/terms'>Terms of Use</a>
+<a href='http://twitter.com/CalcCon' target='_blank'>
+<i class='icon-twitter'></i>
+</a>
+</p>
+<p class='pull-right'>
+©2014 Calculation Consulting
+</p>
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/services/email.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>
