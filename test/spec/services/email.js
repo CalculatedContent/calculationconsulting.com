@@ -3,7 +3,7 @@
 describe('Service: email', function () {
 
   // load the service's module
-  beforeEach(module('calculatedcontentApp'));
+  beforeEach(module('App'));
 
   // instantiate service
   var email;

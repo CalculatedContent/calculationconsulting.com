@@ -1,7 +1,13 @@
 'use strict';
 
-angular.module('calculatedcontentApp')
-  .controller('MainCtrl', function ($scope, $http) {
+app.controller('MainCtrl', function ($scope, $http, $location)
+{
+	$scope.isActive = function(route)
+	{
+        var isactive = (route === $location.path());
+		return isactive;
+    }
+
 	$scope.email = '';
 	$scope.showThankYou = false;
 
@@ -22,4 +28,4 @@ angular.module('calculatedcontentApp')
 		);
 				$scope.showThankYou = true;
 	}
-  });
+});
