@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" ng-app="App">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Calculation Consulting - data science leadership</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-controller="MainCtrl">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/"><span style="color: #67d5f2">calculation</span> <span style="color: #ffffff">|</span> <span style="color: #72f8fe">consulting</span></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li ng-class="{active:isActive('/')}">
+                <a href="/">welcome</a>
+              </li>
+              <li ng-class="{active:isActive('/technology')}">
+                <a href="#technology">technology</a>
+              </li>
+              <li class="dropdown" ng-class="{active:isActive('/team')}">
+                <a href="#team" class="dropdown-toggle" data-toggle="dropdown">team <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#/team/charles">Charles H. Martin, Ph.D.</a></li>
+                  <li><a href="#/team/you">You</a></li>
+                </ul>
+              </li>
+              <li ng-class="{active:isActive('/studies')}">
+                <a href="#studies">case studies</a>
+              </li>
+              <li ng-class="{active:isActive('/contact')}">
+                <a href="#contact">contact</a>
+              </li>
+            </ul>
+           <a class="catchphrase" href="/"><span style="color: #ffffff">data science leadership.</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<br />
+	<br />
+	<br />
+
+<div class="container jumbotron text-center">
+<div ng-view></div>
+</div>
+
+
+<div class="text-center navbar navbar-fixed-bottom">
+<p class=''>
+<!-- linkedin, quora, twitter, wordpress, github, google plus -->
+	<a href='//twitter.com/CalcCon' target='_blank'>
+		<i class='fa fa-twitter-square fa-3x'></i>
+	</a>
+	<a href='//twitter.com/CalcCon' target='_blank'>
+		<i class='fa fa-google-plus-square fa-3x'></i>
+	</a>
+	<a href='//twitter.com/CalcCon' target='_blank'>
+		<i class='fa fa-youtube-square fa-3x'></i>
+	</a>
+	<a href='//github.com/CalculatedContent' target='_blank'>
+		<i class='fa fa-github-square fa-3x'></i>
+	</a>
+	<a href='//linkedin.com/in/charlesmartin14' target='_blank'>
+		<i class='fa fa-linkedin-square fa-3x'></i>
+	</a>
+</p>
+<p class=''>
+&copy;2014 Calculation Consulting
+</p>
+</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/services/email.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>
